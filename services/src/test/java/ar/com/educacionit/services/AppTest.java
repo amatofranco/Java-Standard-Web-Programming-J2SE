@@ -1,4 +1,4 @@
-package ar.com.educacionit.domain;
+package ar.com.educacionit.services;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

@@ -9,5 +9,6 @@
   <description>padre de los modulos</description>
 	<modules>
     <module>domain</module>
-  </modules>
+    <module>services</module>
+	</modules>
 </project>
