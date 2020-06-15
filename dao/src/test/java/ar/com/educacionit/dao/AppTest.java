@@ -1,4 +1,4 @@
-package ar.com.educacionit.services;
+package ar.com.educacionit.dao;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

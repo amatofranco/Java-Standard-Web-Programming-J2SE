@@ -1,30 +1,25 @@
 package ar.com.educacionit.domain;
 
 public class Producto {
+
 	private Long id;
 	private String descripcion;
 	private Float precio;
 	private String codigo;
 	
 	public Producto(Long id, String descripcion, Float precio, String codigo) {
-		super();
 		this.id = id;
 		this.descripcion = descripcion;
 		this.precio = precio;
 		this.codigo = codigo;
 	}
-	
-	// constructor sin id
+
 	public Producto(String descripcion, Float precio, String codigo) {
-		super();
 		this.descripcion = descripcion;
 		this.precio = precio;
 		this.codigo = codigo;
 	}
 
-	
-	//getters y setters
-	
 	public Long getId() {
 		return id;
 	}
@@ -57,18 +52,10 @@ public class Producto {
 		this.codigo = codigo;
 	}
 
-	
-	//toString
 	@Override
 	public String toString() {
 		return "Producto [id=" + id + ", descripcion=" + descripcion + ", precio=" + precio + ", codigo=" + codigo
 				+ "]";
 	}
 	
-	
-	
-	
-	
-	
-
 }
