@@ -20,7 +20,7 @@ public class AdministradorDeConexiones {
 	        String dbUser = "root";
 	       
 	        // Establece la contrase�a de la base de datos
-	        String dbPassword = "root";
+	        String dbPassword = "";
 	       
 	        // Establece el driver de conexion
 	        Class.forName(dbDriver).newInstance();
