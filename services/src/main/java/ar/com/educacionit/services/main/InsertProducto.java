@@ -11,7 +11,7 @@ public class InsertProducto {
 		
 		ProductoServices service = new ProductoServicesImpl();
 
-		Producto p = new Producto("CELULAR LG", 9500f,"4");
+		Producto p = new Producto("CELULAR LG", 9500f,"5");
 		
 		try {
 			//ctrl + T

@@ -11,7 +11,7 @@ public class UpdateProducto {
 
 		ProductoServices service = new ProductoServicesImpl();
 
-		Producto aux = service.obtenerProducto(2L);
+		Producto aux = service.obtenerProducto(7L);
 
 		if(aux != null) {
 			
