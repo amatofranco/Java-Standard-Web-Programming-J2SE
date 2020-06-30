@@ -1,20 +1,19 @@
-package ar.com.educacionit.dtos;
+package ar.com.educacionit.web.model;
 
-public class LoginDto {
+public class LoginModel {
 	
-	
-private String userName;
+	private String userName;
 	
 	private String password;
 
-	public LoginDto(String userName, String password) {
+	public LoginModel(String userName, String password) {
 		super();
 		this.userName = userName;
 		this.password = password;	
 		
 	}
 	
-	public LoginDto() {
+	public LoginModel() {
 		
 	}
 
@@ -36,7 +35,7 @@ private String userName;
 
 	@Override
 	public String toString() {
-		return "LoginDto [userName=" + userName + ", password=" + password + "]";
+		return "LoginModel [userName=" + userName + ", password=" + password + "]";
 	}
 	
 	

@@ -22,25 +22,21 @@ import ar.com.educacionit.services.exceptions.ServiceException;
 
 public class ListadoProductosServlet extends HttpServlet{ //convertimos la clase en Servlet
 	
-    ProductoServices ps = new ProductoServicesImpl();
 
 	@Override
 		protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		
-		List<String> nombres = new ArrayList<String>();
-		nombres.add("Pepe");
-		nombres.add("Cacho");
-		
-		req.setAttribute("nombres", nombres);
-		
+	    ProductoServices ps = new ProductoServicesImpl();
+
+		try {
 			
-		// guardar informacion en un request, para mostrarlo en jsp
+			req.getSession().setAttribute("productos", ps.findProductos());
+			
+		} catch (Exception e) {
+			
+		}
 		
-		req.setAttribute("nombre", "Franco");
-		req.setAttribute("edad", "27");
-		
-		//traslada el request + response a listado.jsp
 		
 		req.getRequestDispatcher("listado.jsp").forward(req, resp);
 		

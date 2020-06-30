@@ -3,40 +3,78 @@
 
 
 <!DOCTYPE html>
+<%@page import="ar.com.educacionit.domain.Producto"%>
 <%@page import="java.util.List"%>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+
+
+<%@include file="header.jsp"%>
+
+
 </head>
 <body>
 
+<%@include file="navbar.jsp" %>
 
-<table>
+
+<div class="container">
+
+<div class="row">
+
+<table class="table">
+
+	<thread>
+	
 	<tr>
-
-		<th>Nombre</th>
+		<th scope="col">Id</th>
+		<th scope="col">Descripcion</th>
+		<th scope="col">Precio</th>
+		<th scope="col">Código</th>
+		<th scope="col">Tipo Producto</th>
+		<th></th>
+		
 	<tr>	
 	
-	
-	<tr>
-	
+	</thread>
+		
 		<tbody>
 		
 		
 		<% 
-		List<String> nombres = (List<String>)request.getAttribute("nombres");
+		List<Producto>	productos = (List<Producto>)session.getAttribute("productos");
 		
 		%>
 		
-		<% for (String nombre : nombres){ %>
+		<% for (Producto producto : productos){ %>
 		
 			<tr> 
-				<th><%out.print(nombre);%></th>  
+				<th scope="row"><%out.print(producto.getId());%></th> 
+				<th scope="row"><%out.print(producto.getDescripcion());%></th>
+				<th scope="row"><%out.print(producto.getPrecio());%></th>
+				<th scope="row"><%out.print(producto.getCodigo());%></th> 
+				<th scope="row"><%out.print(producto.getTipoProducto());%></th> 
+				<th>
+				<button type="button" class="btn btn-outline-primary">Editar</button>
+				<button type="button" class="btn btn-outline-secondary">Eliminar</button>
+				</th>
 				
 			</tr>
 			
 		<%}%>
+		
+		<tr>
+		
+			<td>
+			
+			<button type="button" class="btn btn-outline-primary">Editar</button>
+			<button type="button" class="btn btn-outline-secondary">Eliminar</button>
+		
+			</td>
+		
+		</tr>
+		
+		
 		
 		
 		</tbody>
@@ -51,6 +89,10 @@
 	</tbody>
 
 </table>
+
+</div>
+
+</div>
 
 
 </body>
