@@ -24,7 +24,7 @@
 
 <table class="table">
 
-	<thread>
+	<thead>
 	
 	<tr>
 		<th scope="col">Id</th>
@@ -34,9 +34,9 @@
 		<th scope="col">Tipo Producto</th>
 		<th></th>
 		
-	<tr>	
+	</tr>	
 	
-	</thread>
+	</thead>
 		
 		<tbody>
 		
@@ -80,13 +80,7 @@
 		</tbody>
 	<!-- scriplet = escribir codigo java en un jsp   -->
 		
-		</td>
-		
-		
 	
-	</tr>
-	
-	</tbody>
 
 </table>
 

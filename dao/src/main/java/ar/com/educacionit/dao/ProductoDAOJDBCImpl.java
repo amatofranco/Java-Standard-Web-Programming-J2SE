@@ -104,8 +104,7 @@ public class ProductoDAOJDBCImpl implements ProductoDAO {
 			
 			st = connection.createStatement();
 			
-			st.executeUpdate("INSERT INTO producto (DESCRIPCION, PRECIO, CODIGO) VALUES('"+producto.getDescripcion()+"', "+producto.getPrecio()+", "+producto.getCodigo()+")", Statement.RETURN_GENERATED_KEYS);
-			
+			st.executeUpdate("INSERT INTO producto (DESCRIPCION, PRECIO, CODIGO, TIPO_PRODUCTO) VALUES('"+producto.getDescripcion()+"', "+producto.getPrecio()+", '"+ producto.getCodigo()+"', "+producto.getTipoProducto()+")", Statement.RETURN_GENERATED_KEYS);
 			ResultSet rs=st.getGeneratedKeys();
 			
 			int id;
@@ -123,6 +122,7 @@ public class ProductoDAOJDBCImpl implements ProductoDAO {
 			
 			try {
 				connection.rollback();
+				throw new GenericException(e.getMessage(),e);
 			} catch (SQLException e1) {
 				throw new GenericException(e1.getMessage(), e1);
 			}

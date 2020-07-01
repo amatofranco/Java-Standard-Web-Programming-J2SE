@@ -24,8 +24,11 @@
         </div>       
       </li>
       	<li class="nav-item">
+        <a class="nav-link" href="<%=request.getContextPath()%>/cargarArchivo.jsp">Cargar Archivo</a>
+ 	  	</li>
+      	<li class="nav-item">
         <a class="nav-link" href="<%=request.getContextPath()%>/logout">Logout</a>
- 	  </li>
+ 	  	</li>
     
     </ul>
     
